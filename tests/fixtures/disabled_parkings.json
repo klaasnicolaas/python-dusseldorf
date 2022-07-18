@@ -1,0 +1,203 @@
+{
+    "help": "Search a datastore table. :param resource_id: id or alias of the data that is going to be selected.",
+    "success": true,
+    "result": {
+        "fields": [
+            {
+                "id": "latitude",
+                "type": "text"
+            },
+            {
+                "id": "longitude",
+                "type": "text"
+            },
+            {
+                "id": "altitude",
+                "type": "text"
+            },
+            {
+                "id": "geometry",
+                "type": "text"
+            },
+            {
+                "id": "strasse",
+                "type": "text"
+            },
+            {
+                "id": "hausnr",
+                "type": "text"
+            },
+            {
+                "id": "zusatzid",
+                "type": "text"
+            },
+            {
+                "id": "bemerkung",
+                "type": "text"
+            },
+            {
+                "id": "name",
+                "type": "text"
+            },
+            {
+                "id": "anzahl",
+                "type": "text"
+            },
+            {
+                "id": "zeitbegrenzung",
+                "type": "text"
+            },
+            {
+                "id": "entry_id",
+                "type": "serial"
+            }
+        ],
+        "resource_id": [
+            "995914c7-4275-49c4-8441-426722336c3a"
+        ],
+        "limit": 10,
+        "total": 315,
+        "records": [
+            {
+                "latitude": "51.2251646517767",
+                "longitude": "6.79668628804256",
+                "altitude": "0",
+                "geometry": "point",
+                "strasse": "Ackerstraße",
+                "hausnr": "8",
+                "zusatzid": "",
+                "bemerkung": "",
+                "name": "Innenstadt / Worringer Platz",
+                "anzahl": "1",
+                "zeitbegrenzung": "",
+                "entry_id": "1"
+            },
+            {
+                "latitude": "51.2296990437696",
+                "longitude": "6.80654593218891",
+                "altitude": "0",
+                "geometry": "point",
+                "strasse": "Ackerstraße",
+                "hausnr": "150",
+                "zusatzid": "",
+                "bemerkung": "",
+                "name": "Arztpraxis",
+                "anzahl": "1",
+                "zeitbegrenzung": "Mo. - Fr.  8 - 12:00",
+                "entry_id": "2"
+            },
+            {
+                "latitude": "51.2304160351845",
+                "longitude": "6.80910542259138",
+                "altitude": "0",
+                "geometry": "point",
+                "strasse": "Ackerstraße",
+                "hausnr": "199",
+                "zusatzid": "",
+                "bemerkung": "",
+                "name": "Orthopädie Schuhtechnik",
+                "anzahl": "1",
+                "zeitbegrenzung": "Mo. - Fr.  9 - 18:00",
+                "entry_id": "3"
+            },
+            {
+                "latitude": "51.2182622227472",
+                "longitude": "6.77797033443116",
+                "altitude": "0",
+                "geometry": "point",
+                "strasse": "Adersstraße",
+                "hausnr": "",
+                "zusatzid": "",
+                "bemerkung": "",
+                "name": "LVA",
+                "anzahl": "3",
+                "zeitbegrenzung": "Mo. - Fr.  7 - 14:00",
+                "entry_id": "4"
+            },
+            {
+                "latitude": "51.237650",
+                "longitude": "6.798331",
+                "altitude": "0",
+                "geometry": "point",
+                "strasse": "Ahnfeldplatz",
+                "hausnr": "",
+                "zusatzid": "",
+                "bemerkung": "",
+                "name": "Einkaufszentrum",
+                "anzahl": "1",
+                "zeitbegrenzung": "",
+                "entry_id": "5"
+            },
+            {
+                "latitude": "51.2748360666959",
+                "longitude": "6.78237575010322",
+                "altitude": "0",
+                "geometry": "point",
+                "strasse": "Ahornallee",
+                "hausnr": "5a",
+                "zusatzid": "",
+                "bemerkung": "",
+                "name": "Kindertagesstätte",
+                "anzahl": "1",
+                "zeitbegrenzung": "Mo. - Fr.  7 - 16:00",
+                "entry_id": "6"
+            },
+            {
+                "latitude": "51.291102",
+                "longitude": "6.788809",
+                "altitude": "0",
+                "geometry": "point",
+                "strasse": "Ahrensplatz",
+                "hausnr": "",
+                "zusatzid": "",
+                "bemerkung": "",
+                "name": "Flughafen / Bahnhof",
+                "anzahl": "2",
+                "zeitbegrenzung": "",
+                "entry_id": "7"
+            },
+            {
+                "latitude": "51.2331953690443",
+                "longitude": "6.70534109033413",
+                "altitude": "0",
+                "geometry": "point",
+                "strasse": "Aldekerkstraße",
+                "hausnr": "37",
+                "zusatzid": "",
+                "bemerkung": "",
+                "name": "Begegnungsstätte Diakonie",
+                "anzahl": "1",
+                "zeitbegrenzung": "",
+                "entry_id": "8"
+            },
+            {
+                "latitude": "51.2919882439447",
+                "longitude": "6.74020831619918",
+                "altitude": "0",
+                "geometry": "point",
+                "strasse": "Alte Landstraße",
+                "hausnr": "79",
+                "zusatzid": "",
+                "bemerkung": "",
+                "name": "Arztpraxis",
+                "anzahl": "1",
+                "zeitbegrenzung": "Mo. - Fr.  7 - 19:00",
+                "entry_id": "9"
+            },
+            {
+                "latitude": "51.3009225778847",
+                "longitude": "6.7415756546544",
+                "altitude": "0",
+                "geometry": "point",
+                "strasse": "Alte Landstraße",
+                "hausnr": "188h",
+                "zusatzid": "gegenüber",
+                "bemerkung": "",
+                "name": "Einkaufszentrum",
+                "anzahl": "1",
+                "zeitbegrenzung": "",
+                "entry_id": "10"
+            }
+        ]
+    }
+}

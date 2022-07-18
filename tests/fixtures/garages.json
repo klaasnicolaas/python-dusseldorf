@@ -1,0 +1,147 @@
+{
+    "help": "Search a datastore table. :param resource_id: id or alias of the data that is going to be selected.",
+    "success": true,
+    "result": {
+        "fields": [
+            {
+                "id": "latitude",
+                "type": "text"
+            },
+            {
+                "id": "longitude",
+                "type": "text"
+            },
+            {
+                "id": "altitude",
+                "type": "text"
+            },
+            {
+                "id": "geometry",
+                "type": "text"
+            },
+            {
+                "id": "name",
+                "type": "text"
+            },
+            {
+                "id": "adresse_zufahrt",
+                "type": "text"
+            },
+            {
+                "id": "ort",
+                "type": "text"
+            },
+            {
+                "id": "entry_id",
+                "type": "serial"
+            }
+        ],
+        "resource_id": [
+            "53d63e70-0ed4-4175-9924-c45530d5bf29"
+        ],
+        "limit": 10,
+        "total": 55,
+        "records": [
+            {
+                "latitude": "51.227096",
+                "longitude": "6.789029",
+                "altitude": "0",
+                "geometry": "point",
+                "name": "Galeria-Kaufhof Am Wehrhahn",
+                "adresse_zufahrt": "Oststraße 15",
+                "ort": "40211 Düsseldorf Stadtmitte",
+                "entry_id": "1"
+            },
+            {
+                "latitude": "51.2292448423378",
+                "longitude": "6.79381259809375",
+                "altitude": "0",
+                "geometry": "point",
+                "name": "Am Wehrhahn",
+                "adresse_zufahrt": "Am Wehrhahn 72",
+                "ort": "40211 Düsseldorf Pempelfort",
+                "entry_id": "2"
+            },
+            {
+                "latitude": "51.209159",
+                "longitude": "6.774042",
+                "altitude": "0",
+                "geometry": "point",
+                "name": "Düsseldorf Arcaden",
+                "adresse_zufahrt": "Bachstraße 141",
+                "ort": "40217 Düsseldorf Unterbilk",
+                "entry_id": "3"
+            },
+            {
+                "latitude": "51.2230525186179",
+                "longitude": "6.79208848068309",
+                "altitude": "0",
+                "geometry": "point",
+                "name": "Bendemannstraße",
+                "adresse_zufahrt": "Bendemannstraße 5",
+                "ort": "40210 Düsseldorf Stadtmitte",
+                "entry_id": "4"
+            },
+            {
+                "latitude": "51.2229922455896",
+                "longitude": "6.77366179353614",
+                "altitude": "0",
+                "geometry": "point",
+                "name": "Carlslplatz",
+                "adresse_zufahrt": "Benrather Straße 7B",
+                "ort": "40213 Düsseldorf Carlstadt",
+                "entry_id": "5"
+            },
+            {
+                "latitude": "51.219316243748",
+                "longitude": "6.78229566757991",
+                "altitude": "0",
+                "geometry": "point",
+                "name": "Galeria Kaufhof Berliner Allee",
+                "adresse_zufahrt": "Berliner Allee 52",
+                "ort": "40212 Düsseldorf Stadtmitte",
+                "entry_id": "6"
+            },
+            {
+                "latitude": "51.2204457432369",
+                "longitude": "6.78173080974783",
+                "altitude": "0",
+                "geometry": "point",
+                "name": "Autohaus Moll",
+                "adresse_zufahrt": "Berliner Allee 53",
+                "ort": "40211 Düsseldorf Stadtmitte",
+                "entry_id": "7"
+            },
+            {
+                "latitude": "51.227880",
+                "longitude": "6.785615",
+                "altitude": "0",
+                "geometry": "point",
+                "name": "Verkehrswacht Schadowstraße",
+                "adresse_zufahrt": "Schadowstraße 76",
+                "ort": "40212 Düsseldorf Stadtmitte",
+                "entry_id": "8"
+            },
+            {
+                "latitude": "51.224377",
+                "longitude": "6.776906",
+                "altitude": "0",
+                "geometry": "point",
+                "name": "Carsch-Haus",
+                "adresse_zufahrt": "Breite Straße 1",
+                "ort": "40213 Düsseldorf Stadtmitte",
+                "entry_id": "9"
+            },
+            {
+                "latitude": "51.23565094",
+                "longitude": "6.77303398",
+                "altitude": "0",
+                "geometry": "point",
+                "name": "E.On-Platz",
+                "adresse_zufahrt": "Brüderstraße",
+                "ort": "40477 Düsseldorf Pempelfort",
+                "entry_id": "10"
+            }
+        ]
+    }
+}
