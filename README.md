@@ -208,7 +208,7 @@ SOFTWARE.
 [code-quality]: https://lgtm.com/projects/g/klaasnicolaas/python-dusseldorf/context:python
 [commits-shield]: https://img.shields.io/github/commit-activity/y/klaasnicolaas/python-dusseldorf.svg
 [commits-url]: https://github.com/klaasnicolaas/python-dusseldorf/commits/main
-[codecov-shield]: https://codecov.io/gh/klaasnicolaas/python-dusseldorf/branch/main/graph/badge.svg?token=4Y4YAYHR2D
+[codecov-shield]: https://codecov.io/gh/klaasnicolaas/python-dusseldorf/branch/main/graph/badge.svg?token=3eJrHm0kV5
 [codecov-url]: https://codecov.io/gh/klaasnicolaas/python-dusseldorf
 [forks-shield]: https://img.shields.io/github/forks/klaasnicolaas/python-dusseldorf.svg
 [forks-url]: https://github.com/klaasnicolaas/python-dusseldorf/network/members
@@ -217,7 +217,7 @@ SOFTWARE.
 [license-shield]: https://img.shields.io/github/license/klaasnicolaas/python-dusseldorf.svg
 [last-commit-shield]: https://img.shields.io/github/last-commit/klaasnicolaas/python-dusseldorf.svg
 [maintenance-shield]: https://img.shields.io/maintenance/yes/2022.svg
-[maintainability-shield]: https://api.codeclimate.com/v1/badges/5041849456b7348f3bc7/maintainability
+[maintainability-shield]: https://api.codeclimate.com/v1/badges/516ae9d66f0766a671d0/maintainability
 [maintainability-url]: https://codeclimate.com/github/klaasnicolaas/python-dusseldorf/maintainability
 [project-stage-shield]: https://img.shields.io/badge/project%20stage-experimental-yellow.svg
 [pypi]: https://pypi.org/project/dusseldorf/
