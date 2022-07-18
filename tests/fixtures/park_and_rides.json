@@ -1,0 +1,231 @@
+{
+    "help": "Search a datastore table. :param resource_id: id or alias of the data that is going to be selected.",
+    "success": true,
+    "result": {
+        "fields": [
+            {
+                "id": "latitude",
+                "type": "text"
+            },
+            {
+                "id": "longitude",
+                "type": "text"
+            },
+            {
+                "id": "name",
+                "type": "text"
+            },
+            {
+                "id": "nahverkehr",
+                "type": "text"
+            },
+            {
+                "id": "strasse",
+                "type": "text"
+            },
+            {
+                "id": "hausnummer",
+                "type": "text"
+            },
+            {
+                "id": "hs_zusatz",
+                "type": "text"
+            },
+            {
+                "id": "plz",
+                "type": "text"
+            },
+            {
+                "id": "stadt",
+                "type": "text"
+            },
+            {
+                "id": "stadtbezirk",
+                "type": "text"
+            },
+            {
+                "id": "stadtteil",
+                "type": "text"
+            },
+            {
+                "id": "ostwert",
+                "type": "text"
+            },
+            {
+                "id": "nordwert",
+                "type": "text"
+            },
+            {
+                "id": "entry_id",
+                "type": "serial"
+            }
+        ],
+        "resource_id": [
+            "1fd5b3f3-ea03-4922-9fae-3577fbc9f78a"
+        ],
+        "limit": 10,
+        "total": 35,
+        "records": [
+            {
+                "latitude": "51.26421809",
+                "longitude": "6.819546403",
+                "name": "Rath S",
+                "nahverkehr": "Linie S6, U71, U72, 701",
+                "strasse": "Westfalenstraße",
+                "hausnummer": "90",
+                "hs_zusatz": "",
+                "plz": "40472",
+                "stadt": "Düsseldorf-Rath",
+                "stadtbezirk": "06",
+                "stadtteil": "063",
+                "ostwert": "32347877",
+                "nordwert": "5681466",
+                "entry_id": "1"
+            },
+            {
+                "latitude": "51.20038262",
+                "longitude": "6.755868221",
+                "name": "Am Südfriedhof",
+                "nahverkehr": "Linie 709, 723, 893",
+                "strasse": "Am Südfriedhof",
+                "hausnummer": "11",
+                "hs_zusatz": "",
+                "plz": "40221",
+                "stadt": "Düsseldorf-Bilk",
+                "stadtbezirk": "03",
+                "stadtteil": "036",
+                "ostwert": "32343218",
+                "nordwert": "5674502",
+                "entry_id": "2"
+            },
+            {
+                "latitude": "51.24232978",
+                "longitude": "6.829322103",
+                "name": "Staufenplatz",
+                "nahverkehr": "Linie M1, M2, U73, U83, 709, 730, 733",
+                "strasse": "Ludenberger Straße",
+                "hausnummer": "8",
+                "hs_zusatz": "",
+                "plz": "40629",
+                "stadt": "Düsseldorf-Grafenberg",
+                "stadtbezirk": "07",
+                "stadtteil": "072",
+                "ostwert": "32348487",
+                "nordwert": "5679012",
+                "entry_id": "3"
+            },
+            {
+                "latitude": "51.29058269",
+                "longitude": "6.788162234",
+                "name": "Flughafen Bahnhof",
+                "nahverkehr": "Linie IC/IR, RE1, RE2, RE3, RE5, RE6, RB35, S1, SB51, 729, 759, 776, SkyTrain",
+                "strasse": "Ahrensplatz",
+                "hausnummer": "9",
+                "hs_zusatz": "A",
+                "plz": "40472",
+                "stadt": "Düsseldorf-Lichtenbroich",
+                "stadtbezirk": "06",
+                "stadtteil": "061",
+                "ostwert": "32345776",
+                "nordwert": "5684463",
+                "entry_id": "4"
+            },
+            {
+                "latitude": "51.16297837",
+                "longitude": "6.87776289",
+                "name": "Benrath S",
+                "nahverkehr": "Linie RE1, RE5, S6, S68, SB59, M1, U71, U74, U83, 730, 778, 779, 784, 788, 789, 815, 817, NE7",
+                "strasse": "Friedhofstraße",
+                "hausnummer": "26",
+                "hs_zusatz": "",
+                "plz": "40593",
+                "stadt": "Düsseldorf-Benrath",
+                "stadtbezirk": "09",
+                "stadtteil": "095",
+                "ostwert": "32351613",
+                "nordwert": "5670090",
+                "entry_id": "5"
+            },
+            {
+                "latitude": "51.20321557",
+                "longitude": "6.852149131",
+                "name": "Eller S",
+                "nahverkehr": "Linie S1, M1, 722, 730, 735, 736, 891, NE6",
+                "strasse": "Vennhauser Allee",
+                "hausnummer": "89",
+                "hs_zusatz": "",
+                "plz": "40229",
+                "stadt": "Düsseldorf-Eller",
+                "stadtbezirk": "08",
+                "stadtteil": "082",
+                "ostwert": "32349953",
+                "nordwert": "5674616",
+                "entry_id": "6"
+            },
+            {
+                "latitude": "51.33036745",
+                "longitude": "6.781381138",
+                "name": "Angermund S",
+                "nahverkehr": "Linie S1, 751",
+                "strasse": "An den Linden",
+                "hausnummer": "16",
+                "hs_zusatz": "",
+                "plz": "40489",
+                "stadt": "Düsseldorf-Angermund",
+                "stadtbezirk": "05",
+                "stadtteil": "055",
+                "ostwert": "32345437",
+                "nordwert": "5688901",
+                "entry_id": "7"
+            },
+            {
+                "latitude": "51.19845463",
+                "longitude": "6.8363527",
+                "name": "Eller Süd S",
+                "nahverkehr": "Linie S6, S68, 724, 731, 732, 735, NE6",
+                "strasse": "Sturmstraße",
+                "hausnummer": "80",
+                "hs_zusatz": "",
+                "plz": "40229",
+                "stadt": "Düsseldorf-Eller",
+                "stadtbezirk": "08",
+                "stadtteil": "082",
+                "ostwert": "32348834",
+                "nordwert": "5674119",
+                "entry_id": "8"
+            },
+            {
+                "latitude": "51.14421404",
+                "longitude": "6.896467257",
+                "name": "Garath S (Ostseite u. Westseite)",
+                "nahverkehr": "Linie S6, S68, 778, 779, 789",
+                "strasse": "Koblenzer Straße",
+                "hausnummer": "253",
+                "hs_zusatz": "",
+                "plz": "40595",
+                "stadt": "Düsseldorf-Garath",
+                "stadtbezirk": "10",
+                "stadtteil": "101",
+                "ostwert": "32352861",
+                "nordwert": "5667966",
+                "entry_id": "9"
+            },
+            {
+                "latitude": "51.13145982",
+                "longitude": "6.908925009",
+                "name": "Hellerhof S",
+                "nahverkehr": "Linie S6, S68, 789, 795",
+                "strasse": "Carlo-Schmid-Straße",
+                "hausnummer": "9",
+                "hs_zusatz": "",
+                "plz": "40595",
+                "stadt": "Düsseldorf-Hellerhof",
+                "stadtbezirk": "10",
+                "stadtteil": "102",
+                "ostwert": "32353692",
+                "nordwert": "5666523",
+                "entry_id": "10"
+            }
+        ]
+    }
+}
