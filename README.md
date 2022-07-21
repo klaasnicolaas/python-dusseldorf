@@ -36,9 +36,9 @@ pip install dusseldorf
 
 You can read the following datasets with this package:
 
-- Disabled parking spaces (allgemeinen Behindertenparkplätze)
-- Park and rides locations (Park + Ride Anlagen)
-- Garage locations (Parkhäuser)
+- Disabled parking spaces / allgemeinen Behindertenparkplätze (315)
+- Park and rides locations / Park + Ride Anlagen (35)
+- Garage locations / Parkhäuser (55)
 
 There are a number of parameters you can set to retrieve the data:
 

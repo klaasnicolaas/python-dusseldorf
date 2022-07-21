@@ -12,8 +12,8 @@ class ParkAndRide:
     entry_id: int
     name: str
     address: str
-    district: int
-    neighbourhood: str
+    district: int | None
+    neighbourhood: str | None
     public_transport: str
     longitude: float
     latitude: float
@@ -32,8 +32,8 @@ class ParkAndRide:
             entry_id=int(data["entry_id"]),
             name=data["name"],
             address=f"{data.get('strasse')} {data.get('hausnummer')}{data.get('hs_zusatz')}",
-            district=int(data["stadtbezirk"]),
-            neighbourhood=str(data["stadt"][11:]),
+            district=data["stadtbezirk"] or None,
+            neighbourhood=str(data["stadt"][11:]) or None,
             public_transport=data["nahverkehr"],
             longitude=float(data["longitude"]),
             latitude=float(data["latitude"]),
