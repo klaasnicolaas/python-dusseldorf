@@ -8,10 +8,10 @@
 [![License][license-shield]](LICENSE)
 
 [![GitHub Activity][commits-shield]][commits-url]
-[![Forks][forks-shield]][forks-url]
+[![PyPi Downloads][downloads-shield]][downloads-url]
+[![GitHub Last Commit][last-commit-shield]][commits-url]
 [![Stargazers][stars-shield]][stars-url]
 [![Issues][issues-shield]][issues-url]
-[![GitHub Last Commit][last-commit-shield]][commits-url]
 
 [![Code Quality][code-quality-shield]][code-quality]
 [![Maintainability][maintainability-shield]][maintainability-url]
@@ -210,8 +210,8 @@ SOFTWARE.
 [commits-url]: https://github.com/klaasnicolaas/python-dusseldorf/commits/main
 [codecov-shield]: https://codecov.io/gh/klaasnicolaas/python-dusseldorf/branch/main/graph/badge.svg?token=3eJrHm0kV5
 [codecov-url]: https://codecov.io/gh/klaasnicolaas/python-dusseldorf
-[forks-shield]: https://img.shields.io/github/forks/klaasnicolaas/python-dusseldorf.svg
-[forks-url]: https://github.com/klaasnicolaas/python-dusseldorf/network/members
+[downloads-shield]: https://img.shields.io/pypi/dm/dusseldorf
+[downloads-url]: https://pypistats.org/packages/dusseldorf
 [issues-shield]: https://img.shields.io/github/issues/klaasnicolaas/python-dusseldorf.svg
 [issues-url]: https://github.com/klaasnicolaas/python-dusseldorf/issues
 [license-shield]: https://img.shields.io/github/license/klaasnicolaas/python-dusseldorf.svg
