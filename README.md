@@ -1,4 +1,5 @@
-## Python - ODP Dusseldorf Client
+<!-- Banner -->
+![alt Banner of the ODP Dusseldorf package](https://raw.githubusercontent.com/klaasnicolaas/python-dusseldorf/main/assets/header_dusseldorf-min.png)
 
 <!-- PROJECT SHIELDS -->
 [![GitHub Release][releases-shield]][releases]
