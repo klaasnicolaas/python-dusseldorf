@@ -19,19 +19,24 @@ class ParkAndRide:
     latitude: float
 
     @classmethod
-    def from_dict(cls, data: dict[str, Any]) -> ParkAndRide:
+    def from_dict(cls: type[ParkAndRide], data: dict[str, Any]) -> ParkAndRide:
         """Return a ParkAndRide object from a dictionary.
 
         Args:
+        ----
             data: The data from the API.
 
         Returns:
+        -------
             A ParkAndRide object.
         """
         return cls(
             entry_id=int(data["entry_id"]),
             name=data["name"],
-            address=f"{data.get('strasse')} {data.get('hausnummer')}{data.get('hs_zusatz')}",
+            address=set_address(
+                data["strasse"],
+                data["hausnummer"],
+            ),
             district=data["stadtbezirk"] or None,
             neighbourhood=str(data["stadt"][11:]) or None,
             public_transport=data["nahverkehr"],
@@ -54,20 +59,25 @@ class DisabledParking:
     latitude: float
 
     @classmethod
-    def from_dict(cls, data: dict[str, Any]) -> DisabledParking:
+    def from_dict(cls: type[DisabledParking], data: dict[str, Any]) -> DisabledParking:
         """Return a DisabledParking object from a dictionary.
 
         Args:
+        ----
             data: The data from the API.
 
         Returns:
+        -------
             A DisabledParking object.
         """
         return cls(
             entry_id=int(data["entry_id"]),
             name=data["name"],
             number=int(data["anzahl"]),
-            address=f"{data.get('strasse')} {data.get('hausnr')}",
+            address=set_address(
+                data["strasse"],
+                data["hausnr"],
+            ),
             time_limit=data.get("zeitbegrenzung") or None,
             note=data.get("bemerkung") or None,
             longitude=float(data["longitude"]),
@@ -87,13 +97,15 @@ class Garage:
     latitude: float
 
     @classmethod
-    def from_dict(cls, data: dict[str, Any]) -> Garage:
+    def from_dict(cls: type[Garage], data: dict[str, Any]) -> Garage:
         """Return a Garage object from a dictionary.
 
         Args:
+        ----
             data: The data from the API.
 
         Returns:
+        -------
             A Garage object.
         """
         return cls(
@@ -104,3 +116,18 @@ class Garage:
             longitude=float(data["longitude"]),
             latitude=float(data["latitude"]),
         )
+
+
+def set_address(street: str, number: str) -> str:
+    """Set the address.
+
+    Args:
+    ----
+        street: The street name.
+        number: The house number.
+
+    Returns:
+    -------
+        The address.
+    """
+    return f"{street} {number}"
