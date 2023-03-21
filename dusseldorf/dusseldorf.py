@@ -5,11 +5,10 @@ import asyncio
 import socket
 from dataclasses import dataclass
 from importlib import metadata
-from typing import Any
+from typing import Any, cast
 
-import aiohttp
 import async_timeout
-from aiohttp import hdrs
+from aiohttp import ClientError, ClientSession, hdrs
 from yarl import URL
 
 from .exceptions import ODPDusseldorfConnectionError, ODPDusseldorfError
@@ -21,7 +20,7 @@ class ODPDusseldorf:
     """Main class for handling data fetchting from Open Data Platform of Dusseldorf."""
 
     request_timeout: float = 10.0
-    session: aiohttp.client.ClientSession | None = None
+    session: ClientSession | None = None
 
     _close_session: bool = False
 
@@ -35,15 +34,18 @@ class ODPDusseldorf:
         """Handle a request to the Open Data Platform API of Dusseldorf.
 
         Args:
+        ----
             uri: Request URI, without '/', for example, 'status'
             method: HTTP method to use, for example, 'GET'
             params: Extra options to improve or limit the response.
 
         Returns:
+        -------
             A Python dictionary (text) with the response from
             the Open Data Platform API of Dusseldorf.
 
         Raises:
+        ------
             ODPDusseldorfConnectionError: Timeout occurred while
                 connecting to the Open Data Platform API.
             ODPDusseldorfError: If the data is not valid.
@@ -61,7 +63,7 @@ class ODPDusseldorf:
         }
 
         if self.session is None:
-            self.session = aiohttp.ClientSession()
+            self.session = ClientSession()
             self._close_session = True
 
         try:
@@ -75,31 +77,36 @@ class ODPDusseldorf:
                 )
                 response.raise_for_status()
         except asyncio.TimeoutError as exception:
+            msg = "Timeout occurred while connecting to the Open Data Platform API."
             raise ODPDusseldorfConnectionError(
-                "Timeout occurred while connecting to the Open Data Platform API."
+                msg,
             ) from exception
-        except (aiohttp.ClientError, socket.gaierror) as exception:
+        except (ClientError, socket.gaierror) as exception:
+            msg = "Error occurred while communicating with Open Data Platform API."
             raise ODPDusseldorfConnectionError(
-                "Error occurred while communicating with Open Data Platform API."
+                msg,
             ) from exception
 
         content_type = response.headers.get("Content-Type", "")
         if "application/json" not in content_type:
             text = await response.text()
+            msg = "Unexpected content type response from the Open Data Platform API"
             raise ODPDusseldorfError(
-                "Unexpected content type response from the Open Data Platform API",
+                msg,
                 {"Content-Type": content_type, "Response": text},
             )
 
-        return await response.json()
+        return cast(dict[str, Any], await response.json())
 
     async def disabled_parkings(self, limit: int = 10) -> list[DisabledParking]:
         """Get list of disabled parkings.
 
         Args:
+        ----
             limit: Maximum number of disabled parkings to return.
 
         Returns:
+        -------
             A list of disabled parking objects.
         """
         results: list[DisabledParking] = []
@@ -118,9 +125,11 @@ class ODPDusseldorf:
         """Get list of garages.
 
         Args:
+        ----
             limit: Maximum number of garages to return.
 
         Returns:
+        -------
             A list of garage objects.
         """
         results: list[Garage] = []
@@ -139,9 +148,11 @@ class ODPDusseldorf:
         """Get list of park and rides.
 
         Args:
+        ----
             limit: Maximum number of park and rides to return.
 
         Returns:
+        -------
             A list of park and ride objects.
         """
         results: list[ParkAndRide] = []
@@ -164,7 +175,8 @@ class ODPDusseldorf:
     async def __aenter__(self) -> ODPDusseldorf:
         """Async enter.
 
-        Returns:
+        Returns
+        -------
             The Open Data Platform Dusseldorf object.
         """
         return self
@@ -173,6 +185,7 @@ class ODPDusseldorf:
         """Async exit.
 
         Args:
+        ----
             _exc_info: Exec type.
         """
         await self.close()

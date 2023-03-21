@@ -7,14 +7,9 @@ from dusseldorf import ODPDusseldorf
 
 
 async def main() -> None:
-    """Show example on using the Dusseldorf API client."""
+    """Show example on using the Dusseldorf API client for park and rides."""
     async with ODPDusseldorf() as client:
-        disabled_parkings = await client.disabled_parkings()
-        garages = await client.garages()
-        park_and_rides = await client.park_and_rides()
-
-        print(disabled_parkings)
-        print(garages)
+        park_and_rides = await client.park_and_rides(limit=10)
 
         count: int
         for index, item in enumerate(park_and_rides, 1):

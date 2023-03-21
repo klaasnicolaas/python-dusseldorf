@@ -37,9 +37,9 @@ pip install dusseldorf
 
 You can read the following datasets with this package:
 
-- Disabled parking spaces / allgemeinen Behindertenparkplätze (315)
-- Park and rides locations / Park + Ride Anlagen (35)
-- Garage locations / Parkhäuser (55)
+- [Disabled parking spaces / allgemeinen Behindertenparkplätze][disabled_parking] (315)
+- [Park and rides locations / Park + Ride Anlagen][park_and_rides] (35)
+- [Garage locations / Parkhäuser][garages] (55)
 
 There are a number of parameters you can set to retrieve the data:
 
@@ -201,6 +201,10 @@ SOFTWARE.
 
 [api]: https://opendata.duesseldorf.de/
 [nipkaart]: https://www.nipkaart.nl
+
+[disabled_parking]: https://opendata.duesseldorf.de/dataset/allgemeine-behindertenparkpl%C3%A4tze-d%C3%BCsseldorf
+[park_and_rides]: https://opendata.duesseldorf.de/dataset/park-and-ride-anlagen-d%C3%BCsseldorf
+[garages]: https://opendata.duesseldorf.de/dataset/parkh%C3%A4user-d%C3%BCsseldorf
 
 <!-- MARKDOWN LINKS & IMAGES -->
 [build-shield]: https://github.com/klaasnicolaas/python-dusseldorf/actions/workflows/tests.yaml/badge.svg
