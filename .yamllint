@@ -1,6 +1,6 @@
 ---
 ignore: |
-  .venv/libs
+  .venv/lib
 rules:
   braces:
     level: error
