@@ -22,7 +22,7 @@ classifiers = [
     "Topic :: Software Development :: Libraries :: Python Modules",
 ]
 packages = [
-    { include = "dusseldorf" }
+    { include = "dusseldorf", from = "src" },
 ]
 
 [tool.poetry.dependencies]
