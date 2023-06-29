@@ -15,7 +15,9 @@ async def main() -> None:
         for index, item in enumerate(garages, 1):
             count = index
             print(item)
-        print(f"{count} locations found")
+
+        print("__________________________")
+        print(f"Total locations found: {count}")
 
 
 if __name__ == "__main__":
