@@ -2,6 +2,7 @@
 from __future__ import annotations
 
 from dataclasses import dataclass
+from datetime import datetime
 from typing import Any
 
 
@@ -49,14 +50,16 @@ class ParkAndRide:
 class DisabledParking:
     """Object representing a DisabledParking."""
 
-    entry_id: int
-    name: str
+    entry_id: str
     number: int
     address: str
+    district: str
     time_limit: str | None
     note: str | None
+
     longitude: float
     latitude: float
+    last_update: datetime
 
     @classmethod
     def from_dict(cls: type[DisabledParking], data: dict[str, Any]) -> DisabledParking:
@@ -70,18 +73,21 @@ class DisabledParking:
         -------
             A DisabledParking object.
         """
+        attr = data["properties"]
+        coordinates = data["geometry"]["coordinates"]
         return cls(
-            entry_id=int(data["entry_id"]),
-            name=data["name"],
-            number=int(data["anzahl"]),
-            address=set_address(
-                data["strasse"],
-                data["hausnr"],
-            ),
-            time_limit=data.get("zeitbegrenzung") or None,
-            note=data.get("bemerkung") or None,
-            longitude=float(data["longitude"]),
-            latitude=float(data["latitude"]),
+            entry_id=data["id"].replace("behindertenparkplatz.", ""),
+            number=int(attr["anzahl"][:2]),
+            address=attr["adresse"].strip(),
+            district=attr["stadtteil"],
+            time_limit=attr.get("zeitbegrenzung") or None,
+            note=attr.get("beschreibung") or None,
+            longitude=float(coordinates[0]),
+            latitude=float(coordinates[1]),
+            last_update=datetime.strptime(
+                attr["_last_update"],
+                "%Y-%m-%d",
+            ).astimezone(),
         )
 
 

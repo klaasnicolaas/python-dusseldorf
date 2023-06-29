@@ -24,10 +24,12 @@ class ODPDusseldorf:
 
     _close_session: bool = False
 
-    async def _request(
+    async def _request(  # noqa: PLR0913
         self,
         uri: str,
         *,
+        host: str = "opendata.duesseldorf.de",
+        path: str = "/api/action/datastore/",
         method: str = hdrs.METH_GET,
         params: dict[str, Any] | None = None,
     ) -> Any:
@@ -53,8 +55,8 @@ class ODPDusseldorf:
         version = metadata.version(__package__)
         url = URL.build(
             scheme="https",
-            host="opendata.duesseldorf.de",
-            path="/api/action/datastore/",
+            host=host,
+            path=path,
         ).join(URL(uri))
 
         headers = {
@@ -98,26 +100,26 @@ class ODPDusseldorf:
 
         return cast(dict[str, Any], await response.json())
 
-    async def disabled_parkings(self, limit: int = 10) -> list[DisabledParking]:
+    async def disabled_parkings(self) -> list[DisabledParking]:
         """Get list of disabled parkings.
 
-        Args:
-        ----
-            limit: Maximum number of disabled parkings to return.
-
-        Returns:
+        Returns
         -------
             A list of disabled parking objects.
         """
         results: list[DisabledParking] = []
         locations = await self._request(
-            "search.json",
+            host="maps.duesseldorf.de",
+            path="/services/verkehr/wfs",
+            uri="wfs",
             params={
-                "resource_id": "995914c7-4275-49c4-8441-426722336c3a",
-                "limit": limit,
+                "request": "GetFeature",
+                "typeName": "verkehr:behindertenparkplatz",
+                "outputFormat": "application/json",
+                "srsName": "EPSG:4326",
             },
         )
-        for item in locations["result"]["records"]:
+        for item in locations["features"]:
             results.append(DisabledParking.from_dict(item))
         return results
 
@@ -134,7 +136,7 @@ class ODPDusseldorf:
         """
         results: list[Garage] = []
         locations = await self._request(
-            "search.json",
+            uri="search.json",
             params={
                 "resource_id": "53d63e70-0ed4-4175-9924-c45530d5bf29",
                 "limit": limit,
@@ -157,7 +159,7 @@ class ODPDusseldorf:
         """
         results: list[ParkAndRide] = []
         locations = await self._request(
-            "search.json",
+            uri="search.json",
             params={
                 "resource_id": "1fd5b3f3-ea03-4922-9fae-3577fbc9f78a",
                 "limit": limit,

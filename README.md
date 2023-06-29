@@ -52,14 +52,15 @@ There are a number of parameters you can set to retrieve the data:
 
 | Variable | Type | Description |
 | :------- | :--- | :---------- |
-| `entry_id` | integer | The ID of the parking spot |
-| `name` | string | The name of the parking spot |
+| `entry_id` | string | The ID of the parking spot |
 | `number` | integer | The number of parking spots on this location |
 | `address` | string | The address of the parking spot |
+| `district` | string | The district location of the parking spot |
 | `time_limit` | string | Some locations have window times where the location is only specific for disabled parking, outside these times everyone is allowed to park there |
 | `note` | string | Some locations have a note about the parking spot |
 | `longitude` | float | The longitude of the parking spot |
 | `latitude` | float | The latitude of the parking spot |
+| `last_update` | datetime | The last time the data was updated |
 
 ### Park and Rides
 
