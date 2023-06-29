@@ -1,203 +1,245 @@
 {
-    "help": "Search a datastore table. :param resource_id: id or alias of the data that is going to be selected.",
-    "success": true,
-    "result": {
-        "fields": [
-            {
-                "id": "latitude",
-                "type": "text"
+    "type": "FeatureCollection",
+    "features": [
+        {
+            "type": "Feature",
+            "id": "behindertenparkplatz.a29702e7-94ae-4556-8e83-b57e8368f7c9",
+            "geometry": {
+                "type": "Point",
+                "coordinates": [
+                    6.85161382,
+                    51.17041525
+                ]
             },
-            {
-                "id": "longitude",
-                "type": "text"
-            },
-            {
-                "id": "altitude",
-                "type": "text"
-            },
-            {
-                "id": "geometry",
-                "type": "text"
-            },
-            {
-                "id": "strasse",
-                "type": "text"
-            },
-            {
-                "id": "hausnr",
-                "type": "text"
-            },
-            {
-                "id": "zusatzid",
-                "type": "text"
-            },
-            {
-                "id": "bemerkung",
-                "type": "text"
-            },
-            {
-                "id": "name",
-                "type": "text"
-            },
-            {
-                "id": "anzahl",
-                "type": "text"
-            },
-            {
-                "id": "zeitbegrenzung",
-                "type": "text"
-            },
-            {
-                "id": "entry_id",
-                "type": "serial"
+            "geometry_name": "_geometry",
+            "properties": {
+                "_dic_id": "behplz",
+                "beschreibung": "Stadtbad Niederheid",
+                "zeitbegrenzung": null,
+                "anzahl": "4 Stellplätze",
+                "adresse": "Paul-Thomas-Straße 35 ",
+                "plz": "40589",
+                "stadtteil": "Holthausen",
+                "stadt": "Düsseldorf",
+                "_last_update": "2022-10-28"
             }
-        ],
-        "resource_id": [
-            "995914c7-4275-49c4-8441-426722336c3a"
-        ],
-        "limit": 10,
-        "total": 315,
-        "records": [
-            {
-                "latitude": "51.2251646517767",
-                "longitude": "6.79668628804256",
-                "altitude": "0",
-                "geometry": "point",
-                "strasse": "Ackerstraße",
-                "hausnr": "8",
-                "zusatzid": "",
-                "bemerkung": "",
-                "name": "Innenstadt / Worringer Platz",
-                "anzahl": "1",
-                "zeitbegrenzung": "",
-                "entry_id": "1"
+        },
+        {
+            "type": "Feature",
+            "id": "behindertenparkplatz.eec91bb1-95ae-4be4-8c10-c34e95b1a9a7",
+            "geometry": {
+                "type": "Point",
+                "coordinates": [
+                    6.88558867,
+                    51.14448552
+                ]
             },
-            {
-                "latitude": "51.2296990437696",
-                "longitude": "6.80654593218891",
-                "altitude": "0",
-                "geometry": "point",
-                "strasse": "Ackerstraße",
-                "hausnr": "150",
-                "zusatzid": "",
-                "bemerkung": "",
-                "name": "Arztpraxis",
-                "anzahl": "1",
-                "zeitbegrenzung": "Mo. - Fr.  8 - 12:00",
-                "entry_id": "2"
-            },
-            {
-                "latitude": "51.2304160351845",
-                "longitude": "6.80910542259138",
-                "altitude": "0",
-                "geometry": "point",
-                "strasse": "Ackerstraße",
-                "hausnr": "199",
-                "zusatzid": "",
-                "bemerkung": "",
-                "name": "Orthopädie Schuhtechnik",
-                "anzahl": "1",
-                "zeitbegrenzung": "Mo. - Fr.  9 - 18:00",
-                "entry_id": "3"
-            },
-            {
-                "latitude": "51.2182622227472",
-                "longitude": "6.77797033443116",
-                "altitude": "0",
-                "geometry": "point",
-                "strasse": "Adersstraße",
-                "hausnr": "",
-                "zusatzid": "",
-                "bemerkung": "",
-                "name": "LVA",
-                "anzahl": "3",
-                "zeitbegrenzung": "Mo. - Fr.  7 - 14:00",
-                "entry_id": "4"
-            },
-            {
-                "latitude": "51.237650",
-                "longitude": "6.798331",
-                "altitude": "0",
-                "geometry": "point",
-                "strasse": "Ahnfeldplatz",
-                "hausnr": "",
-                "zusatzid": "",
-                "bemerkung": "",
-                "name": "Einkaufszentrum",
-                "anzahl": "1",
-                "zeitbegrenzung": "",
-                "entry_id": "5"
-            },
-            {
-                "latitude": "51.2748360666959",
-                "longitude": "6.78237575010322",
-                "altitude": "0",
-                "geometry": "point",
-                "strasse": "Ahornallee",
-                "hausnr": "5a",
-                "zusatzid": "",
-                "bemerkung": "",
-                "name": "Kindertagesstätte",
-                "anzahl": "1",
-                "zeitbegrenzung": "Mo. - Fr.  7 - 16:00",
-                "entry_id": "6"
-            },
-            {
-                "latitude": "51.291102",
-                "longitude": "6.788809",
-                "altitude": "0",
-                "geometry": "point",
-                "strasse": "Ahrensplatz",
-                "hausnr": "",
-                "zusatzid": "",
-                "bemerkung": "",
-                "name": "Flughafen / Bahnhof",
-                "anzahl": "2",
-                "zeitbegrenzung": "",
-                "entry_id": "7"
-            },
-            {
-                "latitude": "51.2331953690443",
-                "longitude": "6.70534109033413",
-                "altitude": "0",
-                "geometry": "point",
-                "strasse": "Aldekerkstraße",
-                "hausnr": "37",
-                "zusatzid": "",
-                "bemerkung": "",
-                "name": "Begegnungsstätte Diakonie",
-                "anzahl": "1",
-                "zeitbegrenzung": "",
-                "entry_id": "8"
-            },
-            {
-                "latitude": "51.2919882439447",
-                "longitude": "6.74020831619918",
-                "altitude": "0",
-                "geometry": "point",
-                "strasse": "Alte Landstraße",
-                "hausnr": "79",
-                "zusatzid": "",
-                "bemerkung": "",
-                "name": "Arztpraxis",
-                "anzahl": "1",
-                "zeitbegrenzung": "Mo. - Fr.  7 - 19:00",
-                "entry_id": "9"
-            },
-            {
-                "latitude": "51.3009225778847",
-                "longitude": "6.7415756546544",
-                "altitude": "0",
-                "geometry": "point",
-                "strasse": "Alte Landstraße",
-                "hausnr": "188h",
-                "zusatzid": "gegenüber",
-                "bemerkung": "",
-                "name": "Einkaufszentrum",
-                "anzahl": "1",
-                "zeitbegrenzung": "",
-                "entry_id": "10"
+            "geometry_name": "_geometry",
+            "properties": {
+                "_dic_id": "behplz",
+                "beschreibung": "Einkaufszentrum",
+                "zeitbegrenzung": null,
+                "anzahl": "2 Stellplätze",
+                "adresse": "Peter-Behrens-Straße 2 ",
+                "plz": "40595",
+                "stadtteil": "Garath",
+                "stadt": "Düsseldorf",
+                "_last_update": "2022-10-28"
             }
-        ]
+        },
+        {
+            "type": "Feature",
+            "id": "behindertenparkplatz.e9616d07-69a2-4e1c-9efd-48ddb0351dfd",
+            "geometry": {
+                "type": "Point",
+                "coordinates": [
+                    6.78565818,
+                    51.21858693
+                ]
+            },
+            "geometry_name": "_geometry",
+            "properties": {
+                "_dic_id": "behplz",
+                "beschreibung": "Arztpraxis",
+                "zeitbegrenzung": null,
+                "anzahl": "1 Stellplatz",
+                "adresse": "Pionierstraße 1 ",
+                "plz": "40215",
+                "stadtteil": "Friedrichstadt",
+                "stadt": "Düsseldorf",
+                "_last_update": "2022-10-28"
+            }
+        },
+        {
+            "type": "Feature",
+            "id": "behindertenparkplatz.119bc152-9ace-4f7a-8228-7fefe3c6f791",
+            "geometry": {
+                "type": "Point",
+                "coordinates": [
+                    6.83597885,
+                    51.23818121
+                ]
+            },
+            "geometry_name": "_geometry",
+            "properties": {
+                "_dic_id": "behplz",
+                "beschreibung": "mehrere Berechtigte/Wohngebiet",
+                "zeitbegrenzung": null,
+                "anzahl": "1 Stellplatz",
+                "adresse": "Pöhlenweg 41 ",
+                "plz": "40629",
+                "stadtteil": "Grafenberg",
+                "stadt": "Düsseldorf",
+                "_last_update": "2022-10-28"
+            }
+        },
+        {
+            "type": "Feature",
+            "id": "behindertenparkplatz.a9c27189-1c56-4520-9492-582bcfc22b31",
+            "geometry": {
+                "type": "Point",
+                "coordinates": [
+                    6.83048486,
+                    51.20878751
+                ]
+            },
+            "geometry_name": "_geometry",
+            "properties": {
+                "_dic_id": "behplz",
+                "beschreibung": "Kirche",
+                "zeitbegrenzung": null,
+                "anzahl": "2 Stellplätze",
+                "adresse": "Posener Straße  ",
+                "plz": "40231",
+                "stadtteil": "Lierenfeld",
+                "stadt": "Düsseldorf",
+                "_last_update": "2022-10-28"
+            }
+        },
+        {
+            "type": "Feature",
+            "id": "behindertenparkplatz.4188a370-9bb6-4dbf-8daf-1bd464d9b9a3",
+            "geometry": {
+                "type": "Point",
+                "coordinates": [
+                    6.77169835,
+                    51.22297154
+                ]
+            },
+            "geometry_name": "_geometry",
+            "properties": {
+                "_dic_id": "behplz",
+                "beschreibung": "Maxkirche / Carlsplatz",
+                "zeitbegrenzung": null,
+                "anzahl": "1 Stellplatz",
+                "adresse": "Poststraße 1 ",
+                "plz": "40213",
+                "stadtteil": "Carlstadt",
+                "stadt": "Düsseldorf",
+                "_last_update": "2022-10-28"
+            }
+        },
+        {
+            "type": "Feature",
+            "id": "behindertenparkplatz.1fa87962-5cd3-4442-b148-85fa6d87693c",
+            "geometry": {
+                "type": "Point",
+                "coordinates": [
+                    6.86189224,
+                    51.18448969
+                ]
+            },
+            "geometry_name": "_geometry",
+            "properties": {
+                "_dic_id": "behplz",
+                "beschreibung": "DRK",
+                "zeitbegrenzung": "Mo.-So. 8:00-18:00",
+                "anzahl": "1 Stellplatz",
+                "adresse": "Potsdamer Straße 39 ",
+                "plz": "40599",
+                "stadtteil": "Hassels",
+                "stadt": "Düsseldorf",
+                "_last_update": "2022-10-28"
+            }
+        },
+        {
+            "type": "Feature",
+            "id": "behindertenparkplatz.c4275963-5d4f-4208-ab12-2da7f501c115",
+            "geometry": {
+                "type": "Point",
+                "coordinates": [
+                    6.7345448,
+                    51.23699852
+                ]
+            },
+            "geometry_name": "_geometry",
+            "properties": {
+                "_dic_id": "behplz",
+                "beschreibung": "Ärztehaus",
+                "zeitbegrenzung": null,
+                "anzahl": "1 Stellplatz",
+                "adresse": "Prinzenallee 19 ",
+                "plz": "40549",
+                "stadtteil": "Heerdt",
+                "stadt": "Düsseldorf",
+                "_last_update": "2022-10-28"
+            }
+        },
+        {
+            "type": "Feature",
+            "id": "behindertenparkplatz.595db356-0e41-4014-8702-6e8d975f0a95",
+            "geometry": {
+                "type": "Point",
+                "coordinates": [
+                    6.86591546,
+                    51.23212988
+                ]
+            },
+            "geometry_name": "_geometry",
+            "properties": {
+                "_dic_id": "behplz",
+                "beschreibung": "Friedhof",
+                "zeitbegrenzung": null,
+                "anzahl": "2 Stellplätze",
+                "adresse": "Quadenhofstraße  ",
+                "plz": "40625",
+                "stadtteil": "Gerresheim",
+                "stadt": "Düsseldorf",
+                "_last_update": "2022-10-28"
+            }
+        },
+        {
+            "type": "Feature",
+            "id": "behindertenparkplatz.a7bc2fcf-072c-4b9f-8cf4-26f39890029e",
+            "geometry": {
+                "type": "Point",
+                "coordinates": [
+                    6.75015157,
+                    51.23366626
+                ]
+            },
+            "geometry_name": "_geometry",
+            "properties": {
+                "_dic_id": "behplz",
+                "beschreibung": "vor der Kirche",
+                "zeitbegrenzung": null,
+                "anzahl": "1 Stellplatz",
+                "adresse": "Quirinstraße 32 ",
+                "plz": "40545",
+                "stadtteil": "Oberkassel",
+                "stadt": "Düsseldorf",
+                "_last_update": "2022-10-28"
+            }
+        }
+    ],
+    "totalFeatures": 10,
+    "numberMatched": 10,
+    "numberReturned": 10,
+    "timeStamp": "2023-06-29T09:16:15.932Z",
+    "crs": {
+        "type": "name",
+        "properties": {
+            "name": "urn:ogc:def:crs:EPSG::4326"
+        }
     }
 }

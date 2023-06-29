@@ -1,4 +1,6 @@
 """Test the models."""
+from datetime import datetime
+
 from aiohttp import ClientSession
 from aresponses import ResponsesMockServer
 
@@ -62,8 +64,8 @@ async def test_all_park_and_rides(aresponses: ResponsesMockServer) -> None:
 async def test_all_disabled_parkings(aresponses: ResponsesMockServer) -> None:
     """Test park and ride spaces function."""
     aresponses.add(
-        "opendata.duesseldorf.de",
-        "/api/action/datastore/search.json",
+        "maps.duesseldorf.de",
+        "/services/verkehr/wfs",
         "GET",
         aresponses.Response(
             status=200,
@@ -77,9 +79,9 @@ async def test_all_disabled_parkings(aresponses: ResponsesMockServer) -> None:
         assert spaces is not None
         for item in spaces:
             assert isinstance(item, DisabledParking)
-            assert isinstance(item.entry_id, int)
+            assert isinstance(item.entry_id, str)
             assert item.entry_id is not None
-            assert isinstance(item.name, str)
             assert item.number is not None
             assert isinstance(item.longitude, float)
             assert isinstance(item.latitude, float)
+            assert isinstance(item.last_update, datetime)
