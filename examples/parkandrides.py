@@ -11,9 +11,8 @@ async def main() -> None:
     async with ODPDusseldorf() as client:
         park_and_rides = await client.park_and_rides(limit=10)
 
-        count: int
-        for index, item in enumerate(park_and_rides, 1):
-            count = index
+        count: int = len(park_and_rides)
+        for item in park_and_rides:
             print(item)
 
         print("__________________________")

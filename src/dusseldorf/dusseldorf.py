@@ -107,7 +107,6 @@ class ODPDusseldorf:
         -------
             A list of disabled parking objects.
         """
-        results: list[DisabledParking] = []
         locations = await self._request(
             host="maps.duesseldorf.de",
             path="/services/verkehr/wfs",
@@ -119,9 +118,7 @@ class ODPDusseldorf:
                 "srsName": "EPSG:4326",
             },
         )
-        for item in locations["features"]:
-            results.append(DisabledParking.from_dict(item))
-        return results
+        return [DisabledParking.from_dict(item) for item in locations["features"]]
 
     async def garages(self, limit: int = 10) -> list[Garage]:
         """Get list of garages.
@@ -134,7 +131,6 @@ class ODPDusseldorf:
         -------
             A list of garage objects.
         """
-        results: list[Garage] = []
         locations = await self._request(
             uri="search.json",
             params={
@@ -142,9 +138,7 @@ class ODPDusseldorf:
                 "limit": limit,
             },
         )
-        for item in locations["result"]["records"]:
-            results.append(Garage.from_dict(item))
-        return results
+        return [Garage.from_dict(item) for item in locations["result"]["records"]]
 
     async def park_and_rides(self, limit: int = 10) -> list[ParkAndRide]:
         """Get list of park and rides.
@@ -157,7 +151,6 @@ class ODPDusseldorf:
         -------
             A list of park and ride objects.
         """
-        results: list[ParkAndRide] = []
         locations = await self._request(
             uri="search.json",
             params={
@@ -165,9 +158,7 @@ class ODPDusseldorf:
                 "limit": limit,
             },
         )
-        for item in locations["result"]["records"]:
-            results.append(ParkAndRide.from_dict(item))
-        return results
+        return [ParkAndRide.from_dict(item) for item in locations["result"]["records"]]
 
     async def close(self) -> None:
         """Close open client session."""

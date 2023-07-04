@@ -11,15 +11,12 @@ async def main() -> None:
     async with ODPDusseldorf() as client:
         disabled_parkings = await client.disabled_parkings()
 
-        count: int
-        for index, item in enumerate(disabled_parkings, 1):
-            count = index
+        count: int = len(disabled_parkings)
+        for item in disabled_parkings:
             print(item)
 
         # Count unique id's in disabled_parkings
-        unique_values: list[str] = []
-        for item in disabled_parkings:
-            unique_values.append(str(item.entry_id))
+        unique_values: list[str] = [str(item.entry_id) for item in disabled_parkings]
         num_values = len(set(unique_values))
 
         print("__________________________")
