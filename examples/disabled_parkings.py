@@ -1,5 +1,6 @@
 # pylint: disable=W0621
 """Asynchronous Python client providing Open Data information of Dusseldorf."""
+from __future__ import annotations
 
 import asyncio
 
