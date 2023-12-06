@@ -6,22 +6,18 @@ import asyncio
 import socket
 from dataclasses import dataclass
 from importlib import metadata
-from typing import TYPE_CHECKING, Any, cast
+from typing import Any, Self, cast
 
-import async_timeout
 from aiohttp import ClientError, ClientSession, hdrs
 from yarl import URL
 
 from .exceptions import ODPDusseldorfConnectionError, ODPDusseldorfError
 from .models import DisabledParking, Garage, ParkAndRide
 
-if TYPE_CHECKING:
-    from typing_extensions import Self
-
 
 @dataclass
 class ODPDusseldorf:
-    """Main class for handling data fetchting from Open Data Platform of Dusseldorf."""
+    """Main class for handling data fetching from Open Data Platform of Dusseldorf."""
 
     request_timeout: float = 10.0
     session: ClientSession | None = None
@@ -73,7 +69,7 @@ class ODPDusseldorf:
             self._close_session = True
 
         try:
-            async with async_timeout.timeout(self.request_timeout):
+            async with asyncio.timeout(self.request_timeout):
                 response = await self.session.request(
                     method,
                     url,
