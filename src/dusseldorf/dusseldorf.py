@@ -51,6 +51,7 @@ class ODPDusseldorf:
             ODPDusseldorfConnectionError: Timeout occurred while
                 connecting to the Open Data Platform API.
             ODPDusseldorfError: If the data is not valid.
+
         """
         version = metadata.version(__package__)
         url = URL.build(
@@ -106,6 +107,7 @@ class ODPDusseldorf:
         Returns
         -------
             A list of disabled parking objects.
+
         """
         locations = await self._request(
             host="maps.duesseldorf.de",
@@ -130,6 +132,7 @@ class ODPDusseldorf:
         Returns:
         -------
             A list of garage objects.
+
         """
         locations = await self._request(
             uri="search.json",
@@ -150,6 +153,7 @@ class ODPDusseldorf:
         Returns:
         -------
             A list of park and ride objects.
+
         """
         locations = await self._request(
             uri="search.json",
@@ -171,6 +175,7 @@ class ODPDusseldorf:
         Returns
         -------
             The Open Data Platform Dusseldorf object.
+
         """
         return self
 
@@ -180,5 +185,6 @@ class ODPDusseldorf:
         Args:
         ----
             _exc_info: Exec type.
+
         """
         await self.close()
