@@ -30,6 +30,7 @@ class ParkAndRide:
         Returns:
         -------
             A ParkAndRide object.
+
         """
         return cls(
             entry_id=int(data["entry_id"]),
@@ -72,6 +73,7 @@ class DisabledParking:
         Returns:
         -------
             A DisabledParking object.
+
         """
         attr = data["properties"]
         coordinates = data["geometry"]["coordinates"]
@@ -113,6 +115,7 @@ class Garage:
         Returns:
         -------
             A Garage object.
+
         """
         return cls(
             entry_id=int(data["entry_id"]),
@@ -135,5 +138,6 @@ def set_address(street: str, number: str) -> str:
     Returns:
     -------
         The address.
+
     """
     return f"{street} {number}"
