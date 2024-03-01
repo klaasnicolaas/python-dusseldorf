@@ -1,4 +1,5 @@
 """Asynchronous Python client providing Open Data information of Dusseldorf."""
+
 # pylint: disable=too-many-arguments
 from __future__ import annotations
 
