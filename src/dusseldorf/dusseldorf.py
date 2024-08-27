@@ -25,7 +25,7 @@ class ODPDusseldorf:
 
     _close_session: bool = False
 
-    async def _request(  # noqa: PLR0913
+    async def _request(
         self,
         uri: str,
         *,
