@@ -14,7 +14,9 @@ from dusseldorf.exceptions import ODPDusseldorfConnectionError, ODPDusseldorfErr
 from . import load_fixtures
 
 
-async def test_json_request(aresponses: ResponsesMockServer) -> None:
+async def test_json_request(
+    aresponses: ResponsesMockServer, odp_dusseldorf_client: ODPDusseldorf
+) -> None:
     """Test JSON response is handled correctly."""
     aresponses.add(
         "opendata.duesseldorf.de",
@@ -26,11 +28,8 @@ async def test_json_request(aresponses: ResponsesMockServer) -> None:
             text=load_fixtures("disabled_parkings.json"),
         ),
     )
-    async with ClientSession() as session:
-        client = ODPDusseldorf(session=session)
-        response = await client._request("test")
-        assert response is not None
-        await client.close()
+    await odp_dusseldorf_client._request("test")
+    await odp_dusseldorf_client.close()
 
 
 async def test_internal_session(aresponses: ResponsesMockServer) -> None:
@@ -76,7 +75,9 @@ async def test_timeout(aresponses: ResponsesMockServer) -> None:
             assert await client._request("test")
 
 
-async def test_content_type(aresponses: ResponsesMockServer) -> None:
+async def test_content_type(
+    aresponses: ResponsesMockServer, odp_dusseldorf_client: ODPDusseldorf
+) -> None:
     """Test request content type error from Open Data Platform API of Dusseldorf."""
     aresponses.add(
         "opendata.duesseldorf.de",
@@ -87,11 +88,8 @@ async def test_content_type(aresponses: ResponsesMockServer) -> None:
             headers={"Content-Type": "blabla/blabla"},
         ),
     )
-
-    async with ClientSession() as session:
-        client = ODPDusseldorf(session=session)
-        with pytest.raises(ODPDusseldorfError):
-            assert await client._request("test")
+    with pytest.raises(ODPDusseldorfError):
+        assert await odp_dusseldorf_client._request("test")
 
 
 async def test_client_error() -> None:
