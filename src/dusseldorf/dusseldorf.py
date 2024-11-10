@@ -15,6 +15,8 @@ from yarl import URL
 from .exceptions import ODPDusseldorfConnectionError, ODPDusseldorfError
 from .models import DisabledParking, Garage, ParkAndRide
 
+VERSION = metadata.version(__package__)
+
 
 @dataclass
 class ODPDusseldorf:
@@ -54,7 +56,6 @@ class ODPDusseldorf:
             ODPDusseldorfError: If the data is not valid.
 
         """
-        version = metadata.version(__package__)
         url = URL.build(
             scheme="https",
             host=host,
@@ -63,7 +64,7 @@ class ODPDusseldorf:
 
         headers = {
             "Accept": "application/json",
-            "User-Agent": f"PythonODPDusseldorf/{version}",
+            "User-Agent": f"PythonODPDusseldorf/{VERSION}",
         }
 
         if self.session is None:
