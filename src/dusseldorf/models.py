@@ -3,7 +3,7 @@
 from __future__ import annotations
 
 from dataclasses import dataclass
-from datetime import datetime
+from datetime import UTC, datetime
 from typing import Any
 
 
@@ -90,7 +90,7 @@ class DisabledParking:
             last_update=datetime.strptime(
                 attr["_last_update"],
                 "%Y-%m-%d",
-            ).astimezone(),
+            ).replace(tzinfo=UTC),
         )
 
 

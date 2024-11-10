@@ -1,0 +1,43 @@
+# serializer version: 1
+# name: test_all_disabled_parkings
+  list([
+    DisabledParking(entry_id='a29702e7-94ae-4556-8e83-b57e8368f7c9', number=4, address='Paul-Thomas-Straße 35', district='Holthausen', time_limit=None, note='Stadtbad Niederheid', longitude=6.85161382, latitude=51.17041525, last_update=datetime.datetime(2022, 10, 28, 0, 0, tzinfo=datetime.timezone.utc)),
+    DisabledParking(entry_id='eec91bb1-95ae-4be4-8c10-c34e95b1a9a7', number=2, address='Peter-Behrens-Straße 2', district='Garath', time_limit=None, note='Einkaufszentrum', longitude=6.88558867, latitude=51.14448552, last_update=datetime.datetime(2022, 10, 28, 0, 0, tzinfo=datetime.timezone.utc)),
+    DisabledParking(entry_id='e9616d07-69a2-4e1c-9efd-48ddb0351dfd', number=1, address='Pionierstraße 1', district='Friedrichstadt', time_limit=None, note='Arztpraxis', longitude=6.78565818, latitude=51.21858693, last_update=datetime.datetime(2022, 10, 28, 0, 0, tzinfo=datetime.timezone.utc)),
+    DisabledParking(entry_id='119bc152-9ace-4f7a-8228-7fefe3c6f791', number=1, address='Pöhlenweg 41', district='Grafenberg', time_limit=None, note='mehrere Berechtigte/Wohngebiet', longitude=6.83597885, latitude=51.23818121, last_update=datetime.datetime(2022, 10, 28, 0, 0, tzinfo=datetime.timezone.utc)),
+    DisabledParking(entry_id='a9c27189-1c56-4520-9492-582bcfc22b31', number=2, address='Posener Straße', district='Lierenfeld', time_limit=None, note='Kirche', longitude=6.83048486, latitude=51.20878751, last_update=datetime.datetime(2022, 10, 28, 0, 0, tzinfo=datetime.timezone.utc)),
+    DisabledParking(entry_id='4188a370-9bb6-4dbf-8daf-1bd464d9b9a3', number=1, address='Poststraße 1', district='Carlstadt', time_limit=None, note='Maxkirche / Carlsplatz', longitude=6.77169835, latitude=51.22297154, last_update=datetime.datetime(2022, 10, 28, 0, 0, tzinfo=datetime.timezone.utc)),
+    DisabledParking(entry_id='1fa87962-5cd3-4442-b148-85fa6d87693c', number=1, address='Potsdamer Straße 39', district='Hassels', time_limit='Mo.-So. 8:00-18:00', note='DRK', longitude=6.86189224, latitude=51.18448969, last_update=datetime.datetime(2022, 10, 28, 0, 0, tzinfo=datetime.timezone.utc)),
+    DisabledParking(entry_id='c4275963-5d4f-4208-ab12-2da7f501c115', number=1, address='Prinzenallee 19', district='Heerdt', time_limit=None, note='Ärztehaus', longitude=6.7345448, latitude=51.23699852, last_update=datetime.datetime(2022, 10, 28, 0, 0, tzinfo=datetime.timezone.utc)),
+    DisabledParking(entry_id='595db356-0e41-4014-8702-6e8d975f0a95', number=2, address='Quadenhofstraße', district='Gerresheim', time_limit=None, note='Friedhof', longitude=6.86591546, latitude=51.23212988, last_update=datetime.datetime(2022, 10, 28, 0, 0, tzinfo=datetime.timezone.utc)),
+    DisabledParking(entry_id='a7bc2fcf-072c-4b9f-8cf4-26f39890029e', number=1, address='Quirinstraße 32', district='Oberkassel', time_limit=None, note='vor der Kirche', longitude=6.75015157, latitude=51.23366626, last_update=datetime.datetime(2022, 10, 28, 0, 0, tzinfo=datetime.timezone.utc)),
+  ])
+# ---
+# name: test_all_garages
+  list([
+    Garage(entry_id=1, name='Galeria-Kaufhof Am Wehrhahn', address='Oststraße 15', location='40211 Düsseldorf Stadtmitte', longitude=6.789029, latitude=51.227096),
+    Garage(entry_id=2, name='Am Wehrhahn', address='Am Wehrhahn 72', location='40211 Düsseldorf Pempelfort', longitude=6.79381259809375, latitude=51.2292448423378),
+    Garage(entry_id=3, name='Düsseldorf Arcaden', address='Bachstraße 141', location='40217 Düsseldorf Unterbilk', longitude=6.774042, latitude=51.209159),
+    Garage(entry_id=4, name='Bendemannstraße', address='Bendemannstraße 5', location='40210 Düsseldorf Stadtmitte', longitude=6.79208848068309, latitude=51.2230525186179),
+    Garage(entry_id=5, name='Carlslplatz', address='Benrather Straße 7B', location='40213 Düsseldorf Carlstadt', longitude=6.77366179353614, latitude=51.2229922455896),
+    Garage(entry_id=6, name='Galeria Kaufhof Berliner Allee', address='Berliner Allee 52', location='40212 Düsseldorf Stadtmitte', longitude=6.78229566757991, latitude=51.219316243748),
+    Garage(entry_id=7, name='Autohaus Moll', address='Berliner Allee 53', location='40211 Düsseldorf Stadtmitte', longitude=6.78173080974783, latitude=51.2204457432369),
+    Garage(entry_id=8, name='Verkehrswacht Schadowstraße', address='Schadowstraße 76', location='40212 Düsseldorf Stadtmitte', longitude=6.785615, latitude=51.22788),
+    Garage(entry_id=9, name='Carsch-Haus', address='Breite Straße 1', location='40213 Düsseldorf Stadtmitte', longitude=6.776906, latitude=51.224377),
+    Garage(entry_id=10, name='E.On-Platz', address='Brüderstraße', location='40477 Düsseldorf Pempelfort', longitude=6.77303398, latitude=51.23565094),
+  ])
+# ---
+# name: test_all_park_and_rides
+  list([
+    ParkAndRide(entry_id=1, name='Rath S', address='Westfalenstraße 90', district='06', neighbourhood='Rath', public_transport='Linie S6, U71, U72, 701', longitude=6.819546403, latitude=51.26421809),
+    ParkAndRide(entry_id=2, name='Am Südfriedhof', address='Am Südfriedhof 11', district='03', neighbourhood='Bilk', public_transport='Linie 709, 723, 893', longitude=6.755868221, latitude=51.20038262),
+    ParkAndRide(entry_id=3, name='Staufenplatz', address='Ludenberger Straße 8', district='07', neighbourhood='Grafenberg', public_transport='Linie M1, M2, U73, U83, 709,\xa0730, 733', longitude=6.829322103, latitude=51.24232978),
+    ParkAndRide(entry_id=4, name='Flughafen Bahnhof', address='Ahrensplatz 9', district='06', neighbourhood='Lichtenbroich', public_transport='Linie IC/IR, RE1, RE2, RE3, RE5, RE6, RB35, S1, SB51, 729, 759, 776, SkyTrain', longitude=6.788162234, latitude=51.29058269),
+    ParkAndRide(entry_id=5, name='Benrath S', address='Friedhofstraße 26', district='09', neighbourhood='Benrath', public_transport='Linie RE1, RE5, S6, S68, SB59, M1, U71, U74, U83,\xa0730, 778, 779, 784, 788, 789, 815, 817, NE7', longitude=6.87776289, latitude=51.16297837),
+    ParkAndRide(entry_id=6, name='Eller S', address='Vennhauser Allee 89', district='08', neighbourhood='Eller', public_transport='Linie S1, M1, 722, 730, 735, 736, 891, NE6', longitude=6.852149131, latitude=51.20321557),
+    ParkAndRide(entry_id=7, name='Angermund S', address='An den Linden 16', district='05', neighbourhood='Angermund', public_transport='Linie S1, 751', longitude=6.781381138, latitude=51.33036745),
+    ParkAndRide(entry_id=8, name='Eller Süd S', address='Sturmstraße 80', district='08', neighbourhood='Eller', public_transport='Linie S6, S68, 724, 731, 732, 735, NE6', longitude=6.8363527, latitude=51.19845463),
+    ParkAndRide(entry_id=9, name='Garath S (Ostseite u. Westseite)', address='Koblenzer Straße 253', district='10', neighbourhood='Garath', public_transport='Linie S6, S68, 778, 779, 789', longitude=6.896467257, latitude=51.14421404),
+    ParkAndRide(entry_id=10, name='Hellerhof S', address='Carlo-Schmid-Straße 9', district='10', neighbourhood='Hellerhof', public_transport='Linie S6, S68, 789, 795', longitude=6.908925009, latitude=51.13145982),
+  ])
+# ---
