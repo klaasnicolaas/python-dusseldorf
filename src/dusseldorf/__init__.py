@@ -5,10 +5,10 @@ from .exceptions import ODPDusseldorfConnectionError, ODPDusseldorfError
 from .models import DisabledParking, Garage, ParkAndRide
 
 __all__ = [
+    "DisabledParking",
+    "Garage",
     "ODPDusseldorf",
     "ODPDusseldorfConnectionError",
     "ODPDusseldorfError",
-    "Garage",
     "ParkAndRide",
-    "DisabledParking",
 ]
