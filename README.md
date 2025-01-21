@@ -189,7 +189,7 @@ poetry run pytest --snapshot-update
 
 MIT License
 
-Copyright (c) 2022-2024 Klaas Schoute
+Copyright (c) 2022-2025 Klaas Schoute
 
 Permission is hereby granted, free of charge, to any person obtaining a copy
 of this software and associated documentation files (the "Software"), to deal
@@ -231,7 +231,7 @@ SOFTWARE.
 [downloads-url]: https://pypistats.org/packages/dusseldorf
 [license-shield]: https://img.shields.io/github/license/klaasnicolaas/python-dusseldorf.svg
 [last-commit-shield]: https://img.shields.io/github/last-commit/klaasnicolaas/python-dusseldorf.svg
-[maintenance-shield]: https://img.shields.io/maintenance/yes/2024.svg
+[maintenance-shield]: https://img.shields.io/maintenance/yes/2025.svg
 [maintainability-shield]: https://api.codeclimate.com/v1/badges/516ae9d66f0766a671d0/maintainability
 [maintainability-url]: https://codeclimate.com/github/klaasnicolaas/python-dusseldorf/maintainability
 [project-stage-shield]: https://img.shields.io/badge/project%20stage-experimental-yellow.svg
