@@ -1,6 +1,5 @@
 """Asynchronous Python client providing Open Data information of Dusseldorf."""
 
-# pylint: disable=too-many-arguments
 from __future__ import annotations
 
 import asyncio
@@ -15,7 +14,7 @@ from yarl import URL
 from .exceptions import ODPDusseldorfConnectionError, ODPDusseldorfError
 from .models import DisabledParking, Garage, ParkAndRide
 
-VERSION: str = metadata.version(__package__)  # ty:ignore[invalid-argument-type]
+VERSION: str = metadata.version("dusseldorf")
 
 
 @dataclass
